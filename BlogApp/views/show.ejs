@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<div class="ui main text container">
+    <div class="ui huge header"><%= blog.title %></div>  
+    <div class="ui top attached segment">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%=blog.image %>">
+            <div class="description">
+                <h2>Batch size:</h2><p><%=blog.batchSize%></p>
+                <h2>Mash schedule:</h2><p><%=blog.mashSchedule%></p>
+                <h2>Boil time (in minutes):</h2><p><%=blog.boilTime%></p>
+                <h2>Notes on Malts/Grains:</h2><p><%=blog.grains%></p>
+                <h2>Notes on Hops:</h2><p><%=blog.hops%></p>
+                <h2>Notes on Yeast:</h2><p><%=blog.yeast%></p>
+                <h2>Notes on Adjuncts and Other Ingredients:</h2><p><%=blog.adjuncts%></p>
+                <h2>General notes and comments:</h2><p><%=blog.generalNotes%></p>
+                
+                <a class="ui blue basic button" href="/blogs/<%= blog._id %>/edit">Edit</a>
+                <form id="delete" method="POST" action="/blogs/<%= blog._id%>?_method=DELETE">
+                    <button class="ui red basic button">Delete</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

@@ -1,0 +1,46 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit <%= blog.title %></div>
+    <form class="ui form" action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+       <div class="field"><label>Beer Name</label> 
+        <input type="text" name="blog[title]" value="<%= blog.title %>"></div>
+        <div class="field"><label>Image URL (optional)</label>
+            <input type="text" name="blog[created]" value="<%= blog.created %>"></div>
+       <div class="field"><label>Beer Style (BJCP)</label> 
+        <input type="text" name="blog[styleName]" value="<%= blog.styleName %>">
+    </div>
+       
+        <div class="field"><label>Batch Size</label><input type="text" name="blog[batchSize]" value="<%= blog.batchSize %>"></div>
+       
+        <div class="field"><label>Notes on Mash Schedule</label>
+            <textarea name="blog[mashSchedule]"><%= blog.mashSchedule %></textarea>
+        </div>
+       
+        <div class="field"><label>Enter boil time (minutes)</label>
+            <input type="text" name="blog[boilTime]" value="<%= blog.boilTime %>">
+        </div>
+       
+        <div class="field"><label>Notes on grains used</label>
+            <textarea name="blog[grains]"><%= blog.grains %></textarea>
+        </div>
+       
+        <div class="field"><label>Notes on hops used</label>
+            <textarea name="blog[hops]"><%= blog.hops %></textarea>
+        </div>
+       
+        <div class="field"><label>Notes on yeast used</label>
+            <textarea name="blog[yeast]"><%= blog.yeast %></textarea>
+        </div>
+       
+        <div class="field"><label>Notes on adjuncts used</label>   
+            <textarea name="blog[adjuncts]"><%= blog.adjuncts %></textarea>
+        </div>  
+       
+        <div class="field"><label>General notes and comments</label>
+            <textarea name="blog[generalNotes]"><%= blog.generalNotes %></textarea>
+        </div>
+       
+         <input class="ui green basic button" type="submit">
+
+<% include partials/footer %>
