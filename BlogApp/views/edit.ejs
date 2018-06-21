@@ -6,7 +6,7 @@
        <div class="field"><label>Beer Name</label> 
         <input type="text" name="blog[title]" value="<%= blog.title %>"></div>
         <div class="field"><label>Image URL (optional)</label>
-            <input type="text" name="blog[created]" value="<%= blog.created %>"></div>
+            <input type="text" name="blog[image]" value="<%= blog.image %>"></div>
        <div class="field"><label>Beer Style (BJCP)</label> 
         <input type="text" name="blog[styleName]" value="<%= blog.styleName %>">
     </div>
@@ -41,6 +41,6 @@
             <textarea name="blog[generalNotes]"><%= blog.generalNotes %></textarea>
         </div>
        
-         <input class="ui green basic button" type="submit">
+         <input class="ui green basic button" type="submit" value="submit">
 
 <% include partials/footer %>

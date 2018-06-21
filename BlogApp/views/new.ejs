@@ -2,15 +2,20 @@
 
 <div class="ui main text container segment">
     <div class="ui huge header">New Homebrew</div>
+    
     <form class="ui form" action="/blogs" method="POST">
-       <div class="field"><label>Beer Name</label> 
-        <input type="text" name="blog[title]" placeholder="Beer Name"></div>
+        <div class="field"><label>Beer Name</label> 
+            <input type="text" name="blog[title]" placeholder="Beer Name">
+        </div>
         <div class="field"><label>Image URL (optional)</label>
-            <input type="text" name="blog[created]" placeholder="Image"></div>
-       <div class="field"><label>Beer Style (BJCP)</label> 
-        <input type="text" name="blog[styleName]" placeholder="Beer Style (BJCP)">
-    </div>
-        <div class="field"><label>Batch Size</label><input type="text" name="blog[batchSize]" placeholder="Batch Size"></div>
+            <input type="text" name="blog[image]" placeholder="Image">
+        </div>
+        <div class="field"><label>Beer Style (BJCP)</label> 
+            <input type="text" name="blog[styleName]" placeholder="Beer Style (BJCP)">
+        </div>
+        <div class="field"><label>Batch Size</label>
+            <input type="text" name="blog[batchSize]" placeholder="Batch Size">
+        </div>
         <div class="field"><label>Notes on Mash Schedule</label>
             <textarea name="blog[mashSchedule]" placeholder="Notes on Mash Schedule"></textarea>
         </div>
@@ -32,6 +37,7 @@
         <div class="field"><label>General notes and comments</label>
             <textarea name="blog[generalNotes]" placeholder="General notes or comments"></textarea>
         </div>
-           <input class="ui green basic button" type="submit">
+        
+        <input class="ui green basic button" type="submit" value="submit">
 
 <% include partials/footer %>
