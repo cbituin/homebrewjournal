@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<h1>Index page!</h1>
+
+<% blogs.forEach(function(blog){ %>
+<div>
+    <h2><%=blog.title%></h2>
+    <img src="<%=blog.image%>">
+    <span><%=blog.created%></span>
+    <p><%=blog.styleName%></p>
+    <p><%=blog.batchSize%></p>
+    <p><%=blog.mashSchedule%></p>
+    <p><%=blog.boilTime%></p>
+    <p><%=blog.grains%></p>
+    <p><%=blog.hops%></p>
+    <p><%=blog.yeast%></p>
+    <p><%=blog.adjuncts%></p>
+    <p><%=blog.generalNotes%></p>
+
+</div>
+<% }) %>
+
+<% include partials/footer %>
