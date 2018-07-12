@@ -7,7 +7,7 @@ var express = require("express"),
 
 // APP CONFIG    
 // mongoose.connect("mongodb://localhost/homebrewjournalapp");
-mongoose.connect("mongodb://admincbhomebrewjournal:godisgreat2018!!@ds233531.mlab.com:33531/cbhomebrewjournal");
+mongoose.connect("mongodb://<admincbhomebrewjournal>:<godisgreat2018!!>@ds233531.mlab.com:33531/cbhomebrewjournal");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
