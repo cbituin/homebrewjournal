@@ -85,7 +85,7 @@ app.get("/blogs/:id/edit", function(req, res) {
         } else {
             res.render("edit", {blog: foundBlog});
         }
-    })
+    });
 });
 
 // UPDATE ROUTE
